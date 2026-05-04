@@ -23,18 +23,21 @@ body {
   color: #E0FBF5 !important;
   font-weight: 600;
   letter-spacing: -0.02em;
-  display: inline-flex !important;
+}
+
+.bg-white.p-8.rounded-lg .font-bold.text-center.text-2xl {
+  color: #E0FBF5 !important;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  width: 100%;
 }
 
-.bg-white.p-8.rounded-lg h1::before {
+.bg-white.p-8.rounded-lg .font-bold.text-center.text-2xl::before {
   content: '';
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   flex-shrink: 0;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'><rect width='80' height='80' fill='%23060D1A' rx='18'/><rect x='10' y='10' width='60' height='60' rx='14' fill='%2300D4AA'/><path d='M40 16C40 16 26 25 26 36C26 44.8 32.3 52 40 52C47.7 52 54 44.8 54 36C54 25 40 16 40 16Z' fill='%23060D1A'/><path d='M40 28C40 28 31 33.5 31 39.5C31 43.8 35 47.5 40 47.5C45 47.5 49 43.8 49 39.5C49 33.5 40 28 40 28Z' fill='%23060D1A' opacity='0.35'/></svg>");
   background-size: contain;
