@@ -1,73 +1,230 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-body {
-  background: radial-gradient(at 20% 10%, rgba(0, 212, 170, 0.18) 0px, transparent 55%),
-              radial-gradient(at 80% 90%, rgba(0, 158, 127, 0.14) 0px, transparent 50%),
-              #060D1A !important;
-  background-attachment: fixed !important;
-  font-family: 'Inter', system-ui, sans-serif !important;
-  font-feature-settings: 'cv11', 'ss01';
+:root {
+  --primary:        #00D4AA;
+  --primary-dark:   #009E7F;
+  --deep-night:     #060D1A;
+  --surface:        #F0FAF8;
+  --text-main:      #0A0F1E;
+  --text-secondary: #5F7A8A;
+  --border:         #E2EBE9;
+  --error:          #E24B4A;
+  --white:          #ffffff;
 }
 
+/* ── Base ── */
+body,
+html {
+  font-family: 'Inter', sans-serif !important;
+  background-color: var(--surface) !important;
+  background-image: none !important;
+  background-attachment: unset !important;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  margin: 0;
+}
+
+/* ── Card ── */
 .bg-white.p-8.rounded-lg {
-  background: rgba(10, 22, 36, 0.65) !important;
-  backdrop-filter: blur(28px) saturate(140%);
-  -webkit-backdrop-filter: blur(28px) saturate(140%);
-  border: 1px solid rgba(0, 212, 170, 0.18) !important;
-  border-radius: 14px !important;
-  color: #E0FBF5 !important;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(0, 212, 170, 0.08);
+  background: var(--white) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 12px !important;
+  padding: 32px !important;
+  width: 100%;
+  max-width: 448px;
+  box-shadow: none !important;
 }
 
-.bg-white.p-8.rounded-lg h1 {
-  color: #E0FBF5 !important;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+/* ── Page title ── */
+.bg-white.p-8.rounded-lg h1,
+#kc-page-title,
+.login-pf-page h1 {
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  text-align: center;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
 }
 
+/* ── Logo heading ── */
 .bg-white.p-8.rounded-lg .font-bold.text-center.text-2xl {
-  color: #E0FBF5 !important;
+  color: var(--text-main) !important;
 }
 
-.bg-white.p-8.rounded-lg .dropay-logo {
-  width: 36px;
-  height: 36px;
-  flex-shrink: 0;
+/* ── Labels ── */
+.bg-white.p-8.rounded-lg label,
+.pf-c-form__label-text,
+label {
+  display: block;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: var(--text-main) !important;
+  margin-bottom: 6px;
 }
 
-.bg-white.p-8.rounded-lg label { color: rgba(224, 251, 245, 0.85) !important; }
-
-input {
-  background: rgba(6, 13, 26, 0.55) !important;
-  border-color: rgba(0, 212, 170, 0.2) !important;
-  color: #E0FBF5 !important;
+/* ── Inputs ── */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+.pf-c-form-control {
+  width: 100% !important;
+  height: 40px !important;
+  padding: 0 12px !important;
+  border: 1px solid var(--border) !important;
   border-radius: 8px !important;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  font-size: 14px !important;
+  font-family: 'Inter', sans-serif !important;
+  color: var(--text-main) !important;
+  background: var(--white) !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transition: border-color 0.15s, box-shadow 0.15s !important;
 }
-input::placeholder { color: rgba(224, 251, 245, 0.45) !important; }
+
 input:focus {
-  border-color: rgba(0, 212, 170, 0.6) !important;
-  box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.18) !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 2px rgba(0, 212, 170, 0.2) !important;
 }
 
-.bg-primary-600 {
-  background: #00D4AA !important;
-  color: #060D1A !important;
+input::placeholder {
+  color: var(--text-secondary) !important;
+  opacity: 1 !important;
+}
+
+/* ── Primary button ── */
+#kc-login,
+#kc-register,
+input[type="submit"],
+.bg-primary-600,
+.pf-c-button.pf-m-primary {
+  width: 100% !important;
+  height: 40px !important;
+  background-color: var(--primary) !important;
+  background-image: none !important;
+  color: var(--deep-night) !important;
+  border: none !important;
   border-radius: 8px !important;
-  font-weight: 600;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  font-family: 'Inter', sans-serif !important;
+  cursor: pointer;
+  transition: background-color 0.15s !important;
+  box-shadow: none !important;
 }
-.hover\:bg-primary-700:hover { background: #009E7F !important; color: #E0FBF5 !important; }
 
-.text-primary-600 { color: #00D4AA !important; font-weight: 500; }
-.hover\:text-primary-500:hover { color: #E0FBF5 !important; }
+#kc-login:hover,
+input[type="submit"]:hover,
+.hover\:bg-primary-700:hover {
+  background-color: var(--primary-dark) !important;
+  color: var(--deep-night) !important;
+}
+
+#kc-login:disabled,
+input[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Secondary / social buttons ── */
+.bg-secondary-100,
+.pf-c-button.pf-m-secondary,
+#kc-social-providers .pf-c-button {
+  background-color: var(--surface) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  font-family: 'Inter', sans-serif !important;
+  height: 40px !important;
+  transition: background-color 0.15s !important;
+}
+
+.hover\:bg-secondary-200:hover,
+.pf-c-button.pf-m-secondary:hover {
+  background-color: #e8f5f2 !important;
+}
+
+/* ── Links ── */
+a,
+.text-primary-600,
+.pf-c-button.pf-m-link {
+  color: var(--primary) !important;
+  font-weight: 500;
+  text-decoration: none !important;
+  transition: text-decoration 0.1s;
+}
+
+a:hover,
+.hover\:text-primary-500:hover {
+  color: var(--primary) !important;
+  text-decoration: underline !important;
+}
+
+/* ── Secondary text ── */
+.text-secondary-600 {
+  color: var(--text-secondary) !important;
+}
+
+/* ── Error / alert messages ── */
+.pf-c-alert.pf-m-danger,
+#kc-error-message,
+.alert-error,
+.text-red-600 {
+  background: transparent !important;
+  border: none !important;
+  color: var(--error) !important;
+  font-size: 14px !important;
+  padding: 0 !important;
+  margin-bottom: 16px;
+}
+
+/* ── Separator "ou" ── */
+.separate {
+  color: var(--text-secondary) !important;
+  font-size: 14px;
+  margin: 24px 0;
+}
+
+.separate::before,
+.separate::after {
+  border-color: var(--border) !important;
+}
+
+/* ── Form group spacing ── */
+.pf-c-form__group,
+.form-group,
+.space-y-6 > * + * {
+  margin-bottom: 16px;
+}
+
+/* ── Footer (register/login link) ── */
+#kc-form-options,
+.login-pf-signup {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* ── Focus ring overrides ── */
 .focus\:ring-primary-200:focus { --tw-ring-color: rgba(0, 212, 170, 0.25) !important; }
 .focus\:ring-primary-600:focus { --tw-ring-color: rgba(0, 212, 170, 0.5) !important; }
-.focus\:border-primary-300:focus { border-color: #00D4AA !important; }
+.focus\:border-primary-300:focus { border-color: var(--primary) !important; }
 
-.bg-secondary-100 {
-  background: rgba(0, 212, 170, 0.1) !important;
-  color: #E0FBF5 !important;
-  border-radius: 8px !important;
+/* ── Logo sizing ── */
+.dropay-logo {
+  width: 32px !important;
+  height: 32px !important;
+  flex-shrink: 0;
 }
-.hover\:bg-secondary-200:hover { background: rgba(0, 212, 170, 0.18) !important; }
-.text-secondary-600 { color: rgba(224, 251, 245, 0.7) !important; }
