@@ -1,40 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 body {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%) fixed !important;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 60%, #475569 100%) fixed !important;
   font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-feature-settings: 'cv11', 'ss01';
+  letter-spacing: -0.005em;
 }
 
 .bg-white.p-8.rounded-lg {
-  background: rgba(255, 255, 255, 0.15) !important;
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.3);
-  color: #fff !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(40px) saturate(150%);
+  -webkit-backdrop-filter: blur(40px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  color: #f1f5f9 !important;
 }
 
-.bg-white.p-8.rounded-lg h1,
+.bg-white.p-8.rounded-lg h1 {
+  color: #ffffff !important;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
 .bg-white.p-8.rounded-lg label,
 .bg-white.p-8.rounded-lg .text-secondary-600 {
-  color: rgba(255, 255, 255, 0.95) !important;
+  color: rgba(241, 245, 249, 0.85) !important;
 }
 
 input {
-  background: rgba(255, 255, 255, 0.12) !important;
-  border-color: rgba(255, 255, 255, 0.3) !important;
-  color: #fff !important;
+  background: rgba(15, 23, 42, 0.4) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #f8fafc !important;
+  border-radius: 8px !important;
+  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
 }
-input::placeholder { color: rgba(255, 255, 255, 0.65) !important; }
+input::placeholder { color: rgba(241, 245, 249, 0.4) !important; }
+input:focus {
+  border-color: rgba(99, 102, 241, 0.6) !important;
+  background: rgba(15, 23, 42, 0.6) !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15) !important;
+}
 
-.bg-primary-600 { background-color: #a78bfa !important; }
-.hover\:bg-primary-700:hover { background-color: #8b5cf6 !important; }
-.text-primary-600 { color: #ddd6fe !important; }
-.hover\:text-primary-500:hover { color: #fff !important; }
-.focus\:ring-primary-200:focus { --tw-ring-color: rgba(196, 181, 253, 0.4) !important; }
-.focus\:ring-primary-600:focus { --tw-ring-color: rgba(167, 139, 250, 0.6) !important; }
-.focus\:border-primary-300:focus { border-color: #c4b5fd !important; }
+.bg-primary-600 { background-color: #6366f1 !important; border-radius: 8px !important; font-weight: 500; }
+.hover\:bg-primary-700:hover { background-color: #4f46e5 !important; }
+.text-primary-600 { color: #a5b4fc !important; font-weight: 500; }
+.hover\:text-primary-500:hover { color: #c7d2fe !important; }
+.focus\:ring-primary-200:focus { --tw-ring-color: rgba(99, 102, 241, 0.2) !important; }
+.focus\:ring-primary-600:focus { --tw-ring-color: rgba(99, 102, 241, 0.5) !important; }
+.focus\:border-primary-300:focus { border-color: #818cf8 !important; }
 
-.bg-secondary-100 { background: rgba(255, 255, 255, 0.15) !important; color: #fff !important; }
-.hover\:bg-secondary-200:hover { background: rgba(255, 255, 255, 0.22) !important; }
-.text-secondary-600 { color: rgba(255, 255, 255, 0.85) !important; }
+.bg-secondary-100 {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #f1f5f9 !important;
+  border-radius: 8px !important;
+}
+.hover\:bg-secondary-200:hover { background: rgba(255, 255, 255, 0.1) !important; }
+.text-secondary-600 { color: rgba(241, 245, 249, 0.7) !important; }
