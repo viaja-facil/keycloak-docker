@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+body {
+  background: #ffe600 !important;
+  font-family: 'Space Mono', 'Courier New', monospace !important;
+}
+
+.bg-white.p-8.rounded-lg {
+  background: #ffffff !important;
+  border: 4px solid #000 !important;
+  border-radius: 0 !important;
+  box-shadow: 12px 12px 0 #000 !important;
+}
+
+.bg-white.p-8.rounded-lg h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  font-size: 1.875rem;
+  color: #000;
+}
+
+input {
+  border: 2px solid #000 !important;
+  border-radius: 0 !important;
+  background: #fff !important;
+  font-family: inherit !important;
+}
+input:focus { box-shadow: 4px 4px 0 #000 !important; }
+
+.bg-primary-600 {
+  background: #000 !important;
+  color: #ffe600 !important;
+  border: 2px solid #000;
+  border-radius: 0 !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.hover\:bg-primary-700:hover { background: #ff3e00 !important; color: #fff !important; }
+
+.text-primary-600 { color: #000 !important; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+.hover\:text-primary-500:hover { color: #ff3e00 !important; }
+
+.bg-secondary-100 {
+  background: #fff !important;
+  border: 2px solid #000;
+  border-radius: 0 !important;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.hover\:bg-secondary-200:hover { background: #ffe600 !important; }
+.text-secondary-600 { color: #000 !important; }
+
+.rounded-md, .rounded-lg { border-radius: 0 !important; }

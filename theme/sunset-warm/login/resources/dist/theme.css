@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  background: linear-gradient(135deg, #ff9a8b 0%, #ff6a88 50%, #ff99ac 100%) !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+}
+
+.bg-white.p-8.rounded-lg {
+  background: #fffaf5 !important;
+  border-radius: 20px !important;
+  box-shadow: 0 20px 60px rgba(255, 90, 110, 0.3);
+}
+
+.bg-white.p-8.rounded-lg h1 {
+  color: #c2185b;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+input {
+  background: #fff !important;
+  border-color: #ffd0c4 !important;
+  border-radius: 12px !important;
+}
+input:focus { border-color: #ff6a88 !important; }
+
+.bg-primary-600 {
+  background: linear-gradient(135deg, #ff6a88 0%, #ff9a8b 100%) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 20px rgba(255, 90, 110, 0.35);
+  font-weight: 600;
+}
+.hover\:bg-primary-700:hover { filter: brightness(0.95); background: linear-gradient(135deg, #ff5577 0%, #ff8678 100%) !important; }
+
+.text-primary-600 { color: #ff6a88 !important; font-weight: 500; }
+.hover\:text-primary-500:hover { color: #c2185b !important; }
+
+.bg-secondary-100 { background: #fff0eb !important; border-radius: 12px !important; }
+.hover\:bg-secondary-200:hover { background: #ffe0d5 !important; }
+.text-secondary-600 { color: #8a4f5e !important; }
+
+.focus\:ring-primary-200:focus { --tw-ring-color: rgba(255, 106, 136, 0.3) !important; }
+.focus\:ring-primary-600:focus { --tw-ring-color: rgba(255, 106, 136, 0.55) !important; }
+.focus\:border-primary-300:focus { border-color: #ff9a8b !important; }
