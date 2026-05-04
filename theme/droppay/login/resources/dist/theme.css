@@ -191,15 +191,26 @@ a:hover,
 
 /* ── Separator "ou" ── */
 .separate {
+  display: flex !important;
+  align-items: center !important;
+  text-align: center;
   color: var(--text-secondary) !important;
   font-size: 14px;
   margin: 24px 0;
+  width: 100%;
 }
 
 .separate::before,
 .separate::after {
+  content: "" !important;
+  flex: 1 1 0% !important;
+  border-bottom-width: 1px !important;
+  border-bottom-style: solid !important;
   border-color: var(--border) !important;
 }
+
+.separate:not(:empty)::before { margin-right: 0.75rem !important; }
+.separate:not(:empty)::after  { margin-left:  0.75rem !important; }
 
 /* ── Form group spacing ── */
 .pf-c-form__group,
