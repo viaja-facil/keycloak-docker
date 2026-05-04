@@ -13,18 +13,11 @@
 }
 
 /* ── Base ── */
-body,
-html {
+body {
   font-family: 'Inter', sans-serif !important;
   background-color: var(--surface) !important;
   background-image: none !important;
   background-attachment: unset !important;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  margin: 0;
 }
 
 /* ── Card ── */
@@ -35,8 +28,6 @@ html {
   border: 1px solid var(--border) !important;
   border-radius: 12px !important;
   padding: 32px !important;
-  width: 100%;
-  max-width: 448px;
   box-shadow: none !important;
 }
 
